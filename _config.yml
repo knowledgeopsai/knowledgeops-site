@@ -1,2 +1,6 @@
 include:
   - .env
+  - .env.production
+  - .env.backup
+exclude:
+  - .github

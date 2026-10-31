@@ -1,0 +1,39 @@
+{
+  "info": {
+    "name": "KnowledgeOps gateway chat",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://api.knowledgeops.io/v1"
+    },
+    {
+      "key": "api_key",
+      "value": "sk-0701a93668bb41d826638f7a1187e6e0fcd3b74aab8dbd8b"
+    }
+  ],
+  "item": [
+    {
+      "name": "Chat completion",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "{{base_url}}/chat/completions",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"model\": \"gpt-4o\", \"messages\": [{\"role\": \"user\", \"content\": \"Say hello.\"}], \"max_tokens\": 32}"
+        }
+      }
+    }
+  ]
+}
